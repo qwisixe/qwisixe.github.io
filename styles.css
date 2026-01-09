@@ -6,18 +6,10 @@
 
 :root {
     --primary-color: #000000;
-    --primary-dark: #000000;
-    --secondary-color: #000000;
     --text-primary: #000000;
     --text-secondary: #444444;
     --bg-primary: #ffffff;
-    --bg-secondary: #ffffff;
     --bg-alt: #f7f7f7;
-    --border-color: #d9d9d9;
-    --shadow-sm: none;
-    --shadow-md: none;
-    --shadow-lg: none;
-    --shadow-xl: none;
 }
 
 body {
@@ -35,7 +27,7 @@ body {
 
 .header {
     background: var(--bg-primary);
-    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid #e0e0e0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -68,7 +60,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--primary-color);
+    color: #666;
 }
 
 .hero {
@@ -102,9 +94,6 @@ body {
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 3px solid #000000;
 }
 
@@ -156,7 +145,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    opacity: 0.8;
 }
 
 .btn-secondary {
@@ -166,8 +155,8 @@ body {
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
+    background: #f0f0f0;
+    color: var(--text-primary);
 }
 
 .btn-full {
@@ -216,13 +205,14 @@ body {
     padding: 2rem;
     background: white;
     border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
 }
 
 .stat-number {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
@@ -242,14 +232,15 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .skill-icon {
@@ -279,13 +270,14 @@ body {
     background: white;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-image {
@@ -326,15 +318,16 @@ body {
 }
 
 .tag {
-    background: var(--bg-alt);
+    background: #f0f0f0;
     color: var(--text-primary);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.875rem;
     font-weight: 500;
+    border: 1px solid #d0d0d0;
 }
 
-/* Падающие элементы (стилизованные метки 'AK-47') */
+/* Падающие элементы (AK-47) */
 .falling-container {
     pointer-events: none;
     position: absolute;
@@ -342,28 +335,35 @@ body {
     overflow: hidden;
     z-index: 10;
 }
+
 .falling-item {
     position: absolute;
-    top: -8%;
+    top: -15%;
     transform: translateX(-50%);
-    color: var(--text-primary);
-    opacity: 0.95;
+    color: #000000;
+    opacity: 0.8;
     animation-name: fall;
-    animation-duration: 6s;
+    animation-duration: 6.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-.falling-item svg.rifle-icon { width: 60px; height: auto; display: block; color: var(--text-primary); }
-.falling-item:nth-child(1) { left: 10%; animation-delay: 0s; }
-.falling-item:nth-child(2) { left: 30%; animation-delay: 0.6s; animation-duration: 6.5s; }
-.falling-item:nth-child(3) { left: 50%; animation-delay: 1.2s; animation-duration: 5.8s; }
-.falling-item:nth-child(4) { left: 70%; animation-delay: 1.8s; animation-duration: 6.2s; }
-.falling-item:nth-child(5) { left: 90%; animation-delay: 2.4s; animation-duration: 6.8s; }
+
+.falling-item:nth-child(1) { left: 20%; animation-delay: 0s; }
+.falling-item:nth-child(2) { left: 35%; animation-delay: 1s; animation-duration: 6s; }
+.falling-item:nth-child(3) { left: 50%; animation-delay: 1.5s; animation-duration: 7s; }
+.falling-item:nth-child(4) { left: 65%; animation-delay: 2s; animation-duration: 6.5s; }
+.falling-item:nth-child(5) { left: 80%; animation-delay: 2.5s; animation-duration: 6.8s; }
+
+.rifle-icon {
+    width: 50px;
+    height: 18px;
+    display: block;
+}
 
 @keyframes fall {
-    0% { transform: translateY(-10vh) rotate(-10deg); opacity: 0.95; }
-    70% { opacity: 0.9; }
-    100% { transform: translateY(110vh) rotate(15deg); opacity: 0.7; }
+    0% { transform: translateY(-15vh) rotate(-15deg) translateX(-50%); opacity: 0.8; }
+    50% { opacity: 0.7; }
+    100% { transform: translateY(100vh) rotate(15deg) translateX(-50%); opacity: 0.5; }
 }
 
 .contact-content {
@@ -395,12 +395,13 @@ body {
     text-decoration: none;
     color: var(--text-primary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
 }
 
 .contact-item:hover {
     transform: translateX(5px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-icon {
@@ -426,7 +427,8 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
 }
 
 .contact-form {
@@ -449,17 +451,18 @@ body {
 .form-group input,
 .form-group textarea {
     padding: 0.75rem;
-    border: 2px solid var(--border-color);
+    border: 2px solid #d0d0d0;
     border-radius: 0.5rem;
     font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.3s ease;
+    background: white;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: #000000;
 }
 
 .form-group textarea {
@@ -467,10 +470,11 @@ body {
 }
 
 .footer {
-    background: var(--text-primary);
+    background: #1a1a1a;
     color: white;
     padding: 2rem 0;
     text-align: center;
+    border-top: 1px solid #333;
 }
 
 .footer-content {

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт-визитка - профессиональная презентация">
+    <title>Сайт-визитка</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">Портфолио</div>
+                    <ul class="nav-menu">
+                        <li><a href="#about">О себе</a></li>
+                        <li><a href="#skills">Навыки</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-image">
+                        <div class="avatar-placeholder">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="100" r="90" fill="#6366f1"/>
+                                <text x="100" y="120" font-size="80" fill="white" text-anchor="middle" font-family="Arial">JD</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <h1 class="hero-title">Привет, я <span class="highlight">Иван Иванов</span></h1>
+                        <p class="hero-subtitle">Веб-разработчик и дизайнер</p>
+                        <p class="hero-description">
+                            Создаю современные и функциональные веб-приложения с акцентом на пользовательский опыт и производительность.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">Связаться</a>
+                            <a href="#portfolio" class="btn btn-secondary">Портфолио</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">О себе</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Я профессиональный веб-разработчик с опытом создания современных веб-приложений. 
+                            Специализируюсь на разработке пользовательских интерфейсов и обеспечении отличного 
+                            пользовательского опыта.
+                        </p>
+                        <p>
+                            Моя цель - создавать не просто функциональные, но и красивые решения, которые 
+                            решают реальные задачи пользователей. Я постоянно изучаю новые технологии и 
+                            совершенствую свои навыки.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Проектов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Лет опыта</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Клиентов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h3 class="skill-title">Frontend</h3>
+                        <p class="skill-description">HTML, CSS, JavaScript, React, Vue.js</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚙️</div>
+                        <h3 class="skill-title">Backend</h3>
+                        <p class="skill-description">Node.js, Python, PHP, базы данных</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3 class="skill-title">Дизайн</h3>
+                        <p class="skill-description">UI/UX, Figma, Adobe XD, Photoshop</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🚀</div>
+                        <h3 class="skill-title">Инструменты</h3>
+                        <p class="skill-description">Git, Docker, CI/CD, Webpack</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section-title">Портфолио</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder">Проект 1</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Веб-приложение</h3>
+                            <p class="portfolio-description">Современное веб-приложение с интуитивным интерфейсом</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder">Проект 2</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Мобильное приложение</h3>
+                            <p class="portfolio-description">Кроссплатформенное мобильное приложение</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder">Проект 3</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">E-commerce платформа</h3>
+                            <p class="portfolio-description">Полнофункциональная платформа для онлайн-торговли</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p class="contact-description">
+                            Готов обсудить ваш проект и помочь воплотить идеи в жизнь. 
+                            Свяжитесь со мной любым удобным способом.
+                        </p>
+                        <div class="contact-methods">
+                            <a href="mailto:example@email.com" class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Email</div>
+                                    <div class="contact-value">example@email.com</div>
+                                </div>
+                            </a>
+                            <a href="tel:+1234567890" class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Телефон</div>
+                                    <div class="contact-value">+7 (999) 123-45-67</div>
+                                </div>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="contact-item">
+                                <div class="contact-icon">🔗</div>
+                                <div class="contact-details">
+                                    <div class="contact-label">GitHub</div>
+                                    <div class="contact-value">github.com/username</div>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="contact-item">
+                                <div class="contact-icon">💼</div>
+                                <div class="contact-details">
+                                    <div class="contact-label">LinkedIn</div>
+                                    <div class="contact-value">linkedin.com/in/username</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Все права защищены</p>
+                <p>Создано с ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -355,8 +355,8 @@ body {
 .falling-item:nth-child(5) { left: 80%; animation-delay: 2.5s; animation-duration: 6.8s; }
 
 .rifle-icon {
-    width: 80px;
-    height: 26px;
+    width: 35px;
+    height: 120px;
     display: block;
     color: currentColor;
 }
